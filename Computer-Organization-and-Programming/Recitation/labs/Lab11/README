@@ -1,0 +1,52 @@
+======================================================================
+CS2110                         Lab #11                     Fall 2018
+======================================================================
+
+(This lab is collaborative, so feel free to work with friends or TAs.)
+
+Objective: To get comfortable with our Linux environment, and to
+           practice using the basic assembly instructions (such as
+           LEA, LD, LDR, LDI, ST, STR, STI, AND, ADD, BR).
+
+You can find an appendix of basic assembly instructions on Canvas under:
+   Files > Assembly Resources > PattPatelAppA.pdf
+
+Focus on the program design process:
+   1) Start with Pseudo-code
+   2) Decide on a register-usage scheme
+   3) Translate your psuedo-code into assembly one block at a time
+   4) Test each block
+   5) Debug
+   6) Repeat steps 3-5 until your entire program is complete
+
+================
+Your Assignment:
+================
+
+We have provided you with two skeleton assembly file called "sumtorial.asm" and "sum.asm".
+
+Edit this file and turn in the following:
+
+    1) First you will write an assembly program that add:s two numbers and prints
+    out the result. See more details in the sum.asm file.
+    To Test:
+	a) load the sum.asm file in complx
+	b) hit run
+	c) You should see your output (The sum is: 5) in the I/O box. Show this output to your TA's to recieve a check off
+
+    2) Write an assembly program called "sumtorial.asm" that calculates the sumtorial of a given number.
+
+      The "sumtorial" of a given number is very like the factorial of that number
+      except that instead of multiplying you will add.
+      Factorial(n) = n * (n-1) * (n-2) * ... * 2 * 1
+      Sumtorial(n) = n + (n-1) + (n-2) + (n-3) + ... + 2 + 1
+      To Test:
+	a) load the sumtorial.asm file in complx
+	b) hit run
+        c) You should see your output (15) in the I/O box. Show this output to your TA's to recieve the check off
+
+===========
+Submission:
+===========
+
+When you finish show a TA your outputs

@@ -1,0 +1,2 @@
+The tester will put images in this directory that show the difference between
+the expected and actual images.

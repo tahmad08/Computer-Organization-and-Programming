@@ -1,0 +1,75 @@
+;;====================================
+;; CS 2110 - Fall 2018
+;; Homework 6
+;;====================================
+;; Name: Tahirah Ahmad
+;;====================================
+
+.orig x3000
+;;;R0 AND R1 TO KEEP TRACK IN STRINGS
+;;;R2 AND R3 TO HOLD VALUES
+;;;R4 TO FLIP R3 SO WE CAN COMPARE VALUES
+;;;R5 TO CHECK VALUE
+
+LD R0, STR_ADDR_1			;LOAD IN THE ADDR OF STR1
+LD R1, STR_ADDR_2			;LOAD IN THE ADDR OF STR2
+
+LOOP
+LDR R2, R0, 0				;R2 HOLDS VALUE OF STR1
+LDR R3, R1, 0				;R3 HOLDS VALUE OF STR2
+
+AND R7, R7, 0
+ADD R7, R2, R3
+BRZ EQUAL					;IF BOTH ARE AT THE END OF THEIR STRINGS, THEN THEY ARE EQUAL AND FINISH 
+	
+LDR R4, R1, 0
+NOT R4, R4,
+ADD R4, R4, #1				;NEGATIVE R3
+
+ADD R4, R4, R2				;NOW HOLDS A -,0,+
+BRZ NEXT					;IF ZERO, THEY EQUAL, MOVE FORWARD
+ADD R4, R4, 0
+BRN STR1					;IF NEG, THE THE 1ST STRING BIGGER
+ADD R4, R4, 0
+BRP STR2					;IF POS, STR2 BIGGER
+
+STR1
+AND R5, R5, 0
+ADD R5, R5, -1
+ST R5, ANSWER
+BR EXIT
+
+STR2
+AND R5, R5, 0
+ADD R5, R5, 1
+ST R5, ANSWER
+BR EXIT
+
+NEXT
+ADD R0, R0, #1				;INCREMENTS BOTH
+ADD R1, R1, #1
+BR LOOP
+
+EQUAL						;IF EQUAL STORE 0 AND EXIT
+AND R5, R5, 0
+ST R5, ANSWER
+
+EXIT 
+
+HALT
+
+
+STR_ADDR_1 .fill x4000
+STR_ADDR_2 .fill x4050
+
+ANSWER     .blkw 1
+
+.end
+
+.orig x4000
+  .stringz "This is a test"
+.end
+
+.orig x4050
+  .stringz "This is a rest"
+.end

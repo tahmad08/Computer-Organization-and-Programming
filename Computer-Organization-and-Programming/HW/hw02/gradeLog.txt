@@ -1,0 +1,27 @@
+BitVector.java: 
+	set: 5.0/5.0
+	clear: 5.0/5.0
+	toggle: 5.0/5.0
+	isSet: 5.0/5.0
+	isClear: 5.0/5.0
+	toPaddedBinaryString: 5.0/5.0
+	onesCount: 5.0/5.0
+	zerosCount: 5.0/5.0
+	size: 5.0/5.0
+	Perfect!
+Operations.java: 
+	getByte: 5.0/5.0
+	setShort: 5.0/5.0
+	pack: 5.0/5.0
+	bitRange: 5.0/5.0
+	xnor: 5.0/5.0
+	powerOf2: 5.0/5.0
+	Perfect!
+Bases.java: 
+	decimalStringToInt: 5.0/5.0
+	binaryStringToInt: 5.0/5.0
+	hexStringToInt: 5.0/5.0
+	intToBinaryString: 5.0/5.0
+	intToHexString: 5.0/5.0
+	Perfect!
+Final Grade: 100.0/100.0
